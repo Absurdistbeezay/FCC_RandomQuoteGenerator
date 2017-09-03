@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuoteGenerator</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Lobster|Tangerine');
+		@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+		html, body{
+			background-color: #333;
+			margin:0;
+			padding: 0;
+			height: 100%;
+		}
+
+		#container{
+			width: 400px;
+			margin: 0 auto;
+			
+			position: absolute;
+			top: 25%;
+			left:40%;
+			
+		}
+		#quoteContainer{
+			width: 380px;
+			border: 1px solid #FFF;
+			height: 280px;
+			border-radius: 8px;
+			background-color: rgb(56, 87, 35);
+
+		}
+		#buttons{
+			margin-top: 35px;
+			align-content: center;
+
+
+		
+
+		}
+		#btnQuote{
+			background-color: rgb(251, 106, 106);
+			border: 1px solid #FFF;
+			width: 160px;
+			border-radius: 8px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			font-family: 'Lobster', cursive;
+			font-size: 25px;
+			margin-left: 15px;
+			color: #FFF;
+
+		}
+		#btnQuote:hover{
+			color: #FFF;
+			opacity: 0.5;
+
+		}
+
+		#btnTweet:hover{
+			color: #FFF;
+			opacity: 0.5;
+
+		}
+
+
+		#btnTweet{
+			background-color: rgb(79,35,252);
+			border: 1px solid #FFF;
+			width: 160px;
+			border-radius: 8px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			font-family: 'Lobster', cursive;
+			font-size: 25px;
+			margin-left: 25px;
+			color: #FFF;
+		}
+		#quoteContainer p {
+
+			font-size: 30px;
+		}
+		/*
+		#author p {
+
+			font-size: 25px;
+			color: rgb(251, 106, 106);
+			text-align: right;
+			margin-right: 20px;
+			margin-top: 20px;
+		}	
+		*/	
+
+		#footer {
+   	 		position: fixed;
+    		bottom: 0;
+    		margin: 0;
+			border-top: 1px solid #FFF;
+			border-bottom: 1px solid #FFF;
+			background-color: rgb(56, 87, 35);
+			max-height: 55px;
+			width: 100%;	
+			padding-top: 4px;
+			padding-bottom: 4px;
+			}
+		p{
+			margin: 0;
+			color: #FFF;
+			text-align: center;
+			font-family: 'Dancing Script', cursive;
+			letter-spacing: 0.03em;
+
+			}
+
+		.fa-heart{
+			color: rgb(192, 0, 0);
+			}
+
+	</style>
+	<script type="text/javascript">
+	var quotesArray = ["Life is a journey.",
+                "No one is better than you",
+                "Who could understand better than you?",
+                "Life is not about how many breath you take but blah blah.",
+                "You are your own God",
+                "There is no one who can understand you better than yourself.",
+                "Life is a game, we are just an actor.",
+                "No quote for you. Get lost!"];
+function newQuote(){
+	var randomNumber = Math.floor(Math.random()*(quotesArray.length));
+	document.getElementById('quoteContent').innerHTML = quotesArray[randomNumber];
+}
+
+</script>
+</head>
+<body>
+<div id="container">
+	
+	<div id="quoteContainer">
+	<p id="quoteContent">"In the depth of winter, I finally learned that there was within me an invincible summer."</p>
+		<!--
+		<div id="author">
+			<p>- Albert Camus</p>
+		</div>
+	-->
+	
+	</div>
+
+	<div id="buttons">
+		<button id="btnQuote" onclick="newQuote()">Random Quote</button>
+
+		<button id="btnTweet">Tweet Quote</button>
+		
+	</div>
+
+</div>
+
+
+<footer id="footer">
+  <p> Designed by AB with <i class="fa fa-heart"></i></p>
+</footer>
+</body>
+</html>
